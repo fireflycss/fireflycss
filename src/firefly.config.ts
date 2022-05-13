@@ -1,6 +1,6 @@
 import { defineConfig } from "./helpers/helpers";
 
-export = defineConfig({
+export default defineConfig({
   /* --------------------------- FireFlyCSS Options --------------------------- */
   build: true,
   watch: false,

@@ -1,4 +1,4 @@
-import fs from "node:fs";
+import fs, { existsSync } from "node:fs";
 import path from "node:path";
 import { SimpleArguments } from "simple-arguments";
 
@@ -25,7 +25,7 @@ export function getConfig(cliArguments: SimpleArguments): Config {
     configLocations.push(cliArguments["config"]);
   }
   for (const configLocation of configLocations) {
-    if (!fs.existsSync(configLocation)) continue;
+    if (!existsSync(configLocation)) continue;
     let newConfig = require(configLocation);
     if (newConfig["default"]) {
       newConfig = newConfig["default"];

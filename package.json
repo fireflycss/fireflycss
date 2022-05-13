@@ -4,20 +4,19 @@
   "description": "A CSS framework",
   "type": "commonjs",
   "main": "index.js",
-  "types":"index.d.ts",
+  "types": "index.d.ts",
   "bin": {
     "fireflycss": "cli/index.js"
   },
   "scripts": {
-    "tsc":"tsc",
-    "build-type":"tsc ./src/index.ts --declaration --emitDeclarationOnly --downlevelIteration --outDir ./lib/",
-    "copy-package-json":"cp package.json ./lib",
+    "tsc": "tsc",
+    "build-type": "tsc ./src/index.ts --declaration --emitDeclarationOnly --downlevelIteration --outDir ./lib/",
+    "copy-package-json": "cp package.json ./lib",
     "build": "npm run tsc && npm run build-type && npm run copy-package-json",
     "prepublish-script": "npm run build",
-    "publish-script":" npm publish ./lib --access public",
-
-    "test": "node ./build/cli/index.js --test",
-    "test-build": "node ./build/cli/index.js --config '/test/firefly.config.js'"
+    "publish-script": " npm publish ./lib --access public",
+    "test": "node ./lib/cli/index.js --test",
+    "test-build": "node ./lib/cli/index.js --config '/test/firefly.config.js'"
   },
   "keywords": [
     "css",
