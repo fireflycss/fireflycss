@@ -1,0 +1,132 @@
+utilities
+* permanent variants
+- special utilities(initial,inherit,unset,revert)
+
+utility keys
+* key use
+* multiple properties multiple keys
+* multiple properties single key
+* default key(no key defined)
+* prefixless(key as prefix)
+* color variable insertion
+
+Important
+* before prefix important
+* after prefix important
+* before value important
+* after value important
+
+variable Id
+* prefix variable id with #x
+* input variable id with #x
+* prefix & input variable id with prefix var id first
+
+attributes
+* solo attribute
+* attribute with value
+* split prefix attributes
+* choose default when multiple attribute values([prefix~=~])
+
+variables:
+* variable as prefix/class
+
+raw css
+* raw css(for use in shortcuts)
+
+css Functions
+* css function with value
+* css function without value
+* quotes vs no quotes functions
+* css function utility
+
+variants
+* pseudo classes
+* pseudo elements
+* groups
+* media
+* dynamic media
+* themes
+* selectors
+* dynamic selectors (classes), [arbitrary], elements
+
+arbitrary
+* arbitrary value
+- proper utility for value type
+- define which utility to use
+
+dynamic
+* multiple values
+* multiple inputs
+* keys
+* variable id
+* shorthand
+* single shorthand(different utility when single input(animations))
+* css function
+* arbitrary
+* combination limits(default:1)
+* slash syntax
+* permanent values
+* templates
+* duplicate value
+* insert color variable
+* preserve color opacity
+
+dynamic length
+* solo num / 4
+* num with unit
+* arbitrary value
+* +-*/ math operators
+* css calc
+* css calc variables
+* css calc variable default value
+
+dynamic opacity
+* num / 100
+* arbitrary opacity
+
+dynamic ratio
+* proper ratio
+* single value ratio
+
+Colors
+* key colors
+* hex colors
+* color opacity
+* color arbitrary opacity
+* permanent opacity
+- color standard
+- hex
+- rgb
+- rgba
+- hsl
+- hsla
+- hwb
+- lch
+- lab
+- color
+
+
+Gradients
+* key colors
+* hex colors
+* color opacity
+* color arbitrary opacity
+* permanent opacity
+* gradient stop %/custom unit
+* proper transparent
+* custom angle
+* radial size, x, y
+* conic from, x, y
+
+shadows
+* key shadows with color var insertion
+* multiple shadows
+* shorthand shadows
+* rings
+
+Animations
+* key animations
+* css keyframes generation
+* multiple animations
+* shorthand animations
+* single shorthand animation(when single input, chooses defined animation instead of animation name)
