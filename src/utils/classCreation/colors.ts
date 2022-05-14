@@ -84,6 +84,7 @@ export function setupProperColor(
 }
 
 export function convertColorToProperFormat(color: string, data: Data): string {
+  //todo colorbake
   const colorFormat = data.config.colorFormat;
   if (colorFormat === "rgba") {
     color = convertColorToRgba(color, data);
@@ -99,17 +100,17 @@ function convertColorToRgba(color: string, data: Data): string {
     case "rgba":
       return color;
     case "hex": {
-      console.log(color);
+      //console.log(color);
 
       break;
     }
     case "hsla": {
-      console.log(color);
+      //console.log(color);
 
       break;
     }
     case "hwb": {
-      console.log(color);
+      //console.log(color);
 
       break;
     }

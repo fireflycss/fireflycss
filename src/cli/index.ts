@@ -12,7 +12,7 @@ const cliArguments: SimpleArguments = simpleArguments([
   { name: "build", alias: "b", type: Boolean },
   { name: "watch", alias: "w", type: Boolean },
   { name: "developerTools", alias: "d", type: Boolean },
-  { name: "config", alias: "c", type: String, multiple: true, lazy: true },
+  { name: "config", alias: "c", type: String, multiple: false, lazy: true }, //todo multiple or not multiple configs support. current is false
   { name: "port", alias: "p", type: Number },
   { name: "files", type: String, multiple: true, default: true },
   { name: "test", type: Boolean },

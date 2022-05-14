@@ -16,7 +16,7 @@
     "prepublish-script": "npm run build",
     "publish-script": " npm publish ./lib --access public",
     "test": "node ./lib/cli/index.js --test",
-    "test-build": "node ./lib/cli/index.js --config '/test/firefly.config.js'"
+    "test-build": "node ./lib/cli/index.js --config './test/firefly.config.js'"
   },
   "keywords": [
     "css",

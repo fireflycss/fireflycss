@@ -1,5 +1,5 @@
 import { readdirSync, statSync } from "node:fs";
-import { join } from "node:path";
+import path, { join } from "node:path";
 
 export function stringReplaceAt(
   inputString: string,
@@ -104,4 +104,15 @@ export function checkArrayAllNumbers(
     }
   }
   return returnArray;
+}
+
+export function getProperPath(filePath: string): string {
+  if (
+    filePath === path.basename(filePath) ||
+    filePath.startsWith("./") ||
+    filePath.startsWith("../")
+  ) {
+    filePath = path.join(process.cwd(), filePath);
+  }
+  return filePath;
 }

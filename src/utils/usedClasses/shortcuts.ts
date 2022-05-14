@@ -25,7 +25,6 @@ export function getShortcutClasses(
     };
     objectClasses.push(shortcutClass);
   }
-  console.log("=====", objectClasses);
   return objectClasses;
 }
 

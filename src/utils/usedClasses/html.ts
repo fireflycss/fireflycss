@@ -6,7 +6,6 @@ export const parseHtmlClasses = function (
 ): string[] {
   const lineFind = /(<(?!\?).*?(?<!\?)>)/gs;
   const linesContent: string[] | null = content.match(lineFind);
-  console.log("--------" + content);
   if (!linesContent) return stringClasses;
 
   for (let lineContent of linesContent) {

@@ -2,6 +2,7 @@ import fs, { existsSync } from "node:fs";
 import path from "node:path";
 import { SimpleArguments } from "simple-arguments";
 
+import { getProperPath } from "../general/functions.js";
 import { Keyframes } from "./keyframes.js";
 import { Keys } from "./keys.js";
 import { Safelist } from "./safelist.js";
@@ -16,16 +17,21 @@ export function getConfig(cliArguments: SimpleArguments): Config {
   }
   const configLocations: string[] = [];
   if (typeof cliArguments["project"] === "string") {
-    configLocations.push(cliArguments["project"] + "firefly.config.js");
+    configLocations.push(
+      getProperPath(cliArguments["project"] + "firefly.config.js")
+    );
   }
   if (typeof cliArguments["folder"] === "string") {
-    configLocations.push(cliArguments["folder"] + "firefly.config.js");
+    configLocations.push(
+      getProperPath(cliArguments["folder"] + "firefly.config.js")
+    );
   }
   if (typeof cliArguments["config"] === "string") {
-    configLocations.push(cliArguments["config"]);
+    configLocations.push(getProperPath(cliArguments["config"]));
   }
   for (const configLocation of configLocations) {
     if (!existsSync(configLocation)) continue;
+
     let newConfig = require(configLocation);
     if (newConfig["default"]) {
       newConfig = newConfig["default"];
@@ -70,37 +76,27 @@ function argumentsToConfig(
 
 function validateConfig(config: Config): Config {
   if (config.folder) {
-    config.folder = cwdPath(config.folder);
+    config.folder = getProperPath(config.folder);
     if (fs.existsSync(config.folder) !== true) {
       console.log("Folder path is not valid");
       config.folder = process.cwd();
     }
   }
   if (config.output) {
-    config.output = cwdPath(config.output);
+    config.output = getProperPath(config.output);
     if (fs.existsSync(path.dirname(config.output)) !== true) {
       console.log("Output path is not valid");
       config.output = path.join(config.folder, "./firefly.css");
     }
   }
   if (config.project) {
-    config.project = cwdPath(config.project);
+    config.project = getProperPath(config.project);
     if (fs.existsSync(config.project) !== true) {
       console.log("Project data folder path is not valid");
       config.project = path.join(config.folder, "./fireflycss");
     }
   }
   return config;
-}
-function cwdPath(newPath: string): string {
-  if (
-    newPath === path.basename(newPath) ||
-    newPath.startsWith("./") ||
-    newPath.startsWith("../")
-  ) {
-    newPath = path.join(process.cwd(), newPath);
-  }
-  return newPath;
 }
 /* -------------------------------------------------------------------------- */
 /*                                    Types                                   */

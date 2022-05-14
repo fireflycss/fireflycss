@@ -71,6 +71,5 @@ function cssDataKeyframesInsert(
       );
     }
   }
-  console.log(cssData);
   return cssData;
 }

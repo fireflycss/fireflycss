@@ -42,5 +42,6 @@
     "forceConsistentCasingInFileNames": true,
     //Language and Environment
     "target": "ESNext"
-  }
+  },
+  "include": ["./src/**/*.ts"]
 }
