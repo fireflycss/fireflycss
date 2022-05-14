@@ -1,4 +1,4 @@
-export = {
+export default {
   cursor: {
     prefix: "cursor",
     property: "cursor",

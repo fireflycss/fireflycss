@@ -1,7 +1,7 @@
-import { Data } from "../data/data";
-import { UtilityData } from "../data/utilities";
-import { escapeRegex } from "../general/functions";
-import { isValueValid } from "./valueValid";
+import { Data } from "../data/data.js";
+import { UtilityData } from "../data/utilities.js";
+import { escapeRegex } from "../general/functions.js";
+import { isValueValid } from "./valueValid.js";
 
 export function arbitraryMatch(input: string): boolean {
   if (/^\[.+?]$/.test(input)) {

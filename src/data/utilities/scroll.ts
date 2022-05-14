@@ -1,4 +1,4 @@
-export = {
+export default {
   scrollBehavior: {
     prefix: "scroll",
     property: "scroll-behavior",

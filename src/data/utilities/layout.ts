@@ -1,6 +1,6 @@
 import { defineUtilities } from "../../helpers/helpers";
 
-export = defineUtilities({
+export default defineUtilities({
   display: {
     prefix: "",
     property: "display",

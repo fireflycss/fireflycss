@@ -1,8 +1,8 @@
-import { ClassData } from "../classData/classData";
-import { Data } from "../data/data";
-import { UtilityData } from "../data/utilities";
-import { arbitraryCreator, creator, variableCreator } from "./creators";
-import { setupFullClassName } from "./fullClassName";
+import { ClassData } from "../classData/classData.js";
+import { Data } from "../data/data.js";
+import { UtilityData } from "../data/utilities.js";
+import { arbitraryCreator, creator, variableCreator } from "./creators.js";
+import { setupFullClassName } from "./fullClassName.js";
 
 export function classCreator(classData: ClassData, data: Data): ClassData {
   if (classData.type === "arbitrary") {
@@ -26,7 +26,6 @@ export function classCreator(classData: ClassData, data: Data): ClassData {
   }
   const prefixData: PrefixData = data.utilities[prefix];
   classData = createFromPrefixData(classData, prefixData, key, data);
-
   return classData;
 }
 

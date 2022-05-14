@@ -1,10 +1,10 @@
-import { ClassData } from "../classData/classData";
-import { getValueImportant } from "../classData/classImportance";
-import { Data } from "../data/data";
-import { UtilityData } from "../data/utilities";
-import { escapeRegex } from "../general/functions";
-import { getClassValue, getClassValues } from "./classValues";
-import { setupFullClassName } from "./fullClassName";
+import { ClassData } from "../classData/classData.js";
+import { getValueImportant } from "../classData/classImportance.js";
+import { Data } from "../data/data.js";
+import { UtilityData } from "../data/utilities.js";
+import { escapeRegex } from "../general/functions.js";
+import { getClassValue, getClassValues } from "./classValues.js";
+import { setupFullClassName } from "./fullClassName.js";
 
 export function creator(
   classData: ClassData,

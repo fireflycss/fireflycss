@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import simpleArguments, { SimpleArguments } from "simple-arguments";
 
-import { main } from "../main/main";
+import { main } from "../main/main.js";
 
 const version = "0.0.1";
 const documentation = `Documentation Info for the FireFlyCSS CLI`;

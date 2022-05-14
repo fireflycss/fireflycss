@@ -2,8 +2,8 @@
 Keys:
 * backgroundImages
 */
-export = {
-    backgroundImages: {
-        star: "url(star.png)",
-    },
+export default {
+  backgroundImages: {
+    star: "url(star.png)",
+  },
 };

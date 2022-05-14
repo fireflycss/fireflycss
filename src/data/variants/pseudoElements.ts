@@ -1,4 +1,4 @@
-export = {
+export default {
   pseudoElements: {
     before: "before",
     backdrop: "backdrop",

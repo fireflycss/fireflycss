@@ -1,12 +1,13 @@
-import { Data } from "../data/data";
-import { escapeRegex } from "../general/functions";
-import { ClassData } from "./classData";
+import { Data } from "../data/data.js";
+import { escapeRegex } from "../general/functions.js";
+import { ClassData } from "./classData.js";
 
 export function getPrefixKey(classData: ClassData, data: Data): ClassData {
   if (
     classData.type === "class" ||
     classData.type === "attribute" ||
-    classData.type === "variable"
+    classData.type === "variable" ||
+    classData.type === "rawCss"
   ) {
     classData = getClassPrefixKey(classData, data);
   } else if (classData.type === "attributeWithValue") {

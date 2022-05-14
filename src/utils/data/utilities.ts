@@ -1,6 +1,6 @@
-import { Config } from "./config";
-import { DataPart, DataPartValue, getDataPart } from "./dataPart";
-import { Keys } from "./keys";
+import { Config } from "./config.js";
+import { DataPart, DataPartValue, getDataPart } from "./dataPart.js";
+import { Keys } from "./keys.js";
 
 export function getUtilities(config: Config, keys: Keys): DataUtilities {
   if (!config && !keys) {

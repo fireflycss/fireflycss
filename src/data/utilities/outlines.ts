@@ -1,4 +1,4 @@
-export = {
+export default {
   outlineStyle: {
     prefix: "outline",
     property: "outline-style",

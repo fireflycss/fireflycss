@@ -1,5 +1,5 @@
-import { Config } from "./config";
-import { DataPart, getDataPart } from "./dataPart";
+import { Config } from "./config.js";
+import { DataPart, getDataPart } from "./dataPart.js";
 
 export { getKeyframes };
 

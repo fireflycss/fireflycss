@@ -1,8 +1,8 @@
-import { CssData } from "../../main/loop";
-import { ClassData } from "../classData/classData";
-import { getValueImportant } from "../classData/classImportance";
-import { Data } from "../data/data";
-import { classDataToCssData } from "./classDataToCssData";
+import { CssData } from "../../main/loop.js";
+import { ClassData } from "../classData/classData.js";
+import { getValueImportant } from "../classData/classImportance.js";
+import { Data } from "../data/data.js";
+import { classDataToCssData } from "./classDataToCssData.js";
 
 export function multiClassDataToCssData(
   multiClassData: MultiClassData,
@@ -27,7 +27,7 @@ export function multiClassDataToCssData(
 
     let properties = "";
     for (const property of combinedClassData.properties) {
-      properties += "\n\t" + property; //todo important and ; should already be part of property. test
+      properties += "\n\t" + property + ";";
     }
     const cssClass = fullClassName + " {" + properties + "\n}";
     combinedClassData.cssClass = cssClass;
@@ -39,6 +39,7 @@ export function multiClassDataToCssData(
 
 function combineClassesData(classesData: ClassData[]) {
   const combinedClassesData: { [key: string]: ClassData } = {};
+
   for (const classData of classesData) {
     const usedVariantsString = classData.usedVariants.join(",");
     if (!combinedClassesData[usedVariantsString]) {
@@ -64,7 +65,7 @@ function combineClassesData(classesData: ClassData[]) {
       };
     }
     for (let property of classData.properties) {
-      property = property.replace(/;$/, getValueImportant(classData) + ";");
+      property += getValueImportant(classData);
       combinedClassesData[usedVariantsString]?.properties.push(property);
     }
   }

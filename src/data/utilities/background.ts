@@ -1,5 +1,5 @@
 // Background Module
-export = {
+export default {
   backgroundColor: {
     prefix: "bg",
     property: "background-color",

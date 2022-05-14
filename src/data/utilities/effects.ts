@@ -1,4 +1,4 @@
-export = {
+export default {
   boxShadow: {
     prefix: "shadow",
     properties: ["--ff-shadow", "box-shadow"],

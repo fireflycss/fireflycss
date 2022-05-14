@@ -1,1 +1,1 @@
-export = { specialAttributes: { transform: 1 } };
+export default { specialAttributes: { transform: 1 } };

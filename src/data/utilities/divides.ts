@@ -1,4 +1,4 @@
-export = {
+export default {
   divideWidthX: {
     prefix: "divide-x",
     properties: ["border-left-width", "border-right-width"],

@@ -2,12 +2,12 @@ import fs, { existsSync } from "node:fs";
 import path from "node:path";
 import { SimpleArguments } from "simple-arguments";
 
-import { Keyframes } from "./keyframes";
-import { Keys } from "./keys";
-import { Safelist } from "./safelist";
-import { Shortcuts } from "./shortcuts";
-import { rawUtilities } from "./utilities";
-import { Variants } from "./variants";
+import { Keyframes } from "./keyframes.js";
+import { Keys } from "./keys.js";
+import { Safelist } from "./safelist.js";
+import { Shortcuts } from "./shortcuts.js";
+import { rawUtilities } from "./utilities.js";
+import { Variants } from "./variants.js";
 
 export function getConfig(cliArguments: SimpleArguments): Config {
   let config: Config = require("../../firefly.config");

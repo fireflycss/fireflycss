@@ -1,4 +1,4 @@
-import { DataPart } from "./dataPart";
+import { DataPart } from "./dataPart.js";
 
 export function mergeData(target: DataPart, source: DataPart): DataPart {
   //support choice for replace or extend by default in config

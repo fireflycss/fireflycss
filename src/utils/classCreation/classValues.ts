@@ -1,11 +1,11 @@
-import { ClassData } from "../classData/classData";
-import { placeVariableIdOnValue } from "../classData/variableId";
-import { Data } from "../data/data";
-import { UtilityData } from "../data/utilities";
-import { escapeRegex } from "../general/functions";
-import { arbitraryGenerator, arbitraryMatch } from "./arbitraryGenerator";
-import { setupProperColor } from "./colors";
-import { dynamicGenerator } from "./dynamicGenerator";
+import { ClassData } from "../classData/classData.js";
+import { placeVariableIdOnValue } from "../classData/variableId.js";
+import { Data } from "../data/data.js";
+import { UtilityData } from "../data/utilities.js";
+import { escapeRegex } from "../general/functions.js";
+import { arbitraryGenerator, arbitraryMatch } from "./arbitraryGenerator.js";
+import { setupProperColor } from "./colors.js";
+import { dynamicGenerator } from "./dynamicGenerator.js";
 
 export function getClassValue(
   classData: ClassData,

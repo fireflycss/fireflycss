@@ -49,6 +49,6 @@
   },
   "homepage": "https://github.com/fireflycss/fireflycss",
   "dependencies": {
-    "simple-arguments": "^0.0.8"
+    "simple-arguments": "^0.0.9"
   }
 }

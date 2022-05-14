@@ -1,4 +1,4 @@
-export = {
+export default {
   transform: {
     prefix: "transform",
     property: "transform",

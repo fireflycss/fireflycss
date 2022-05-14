@@ -1,6 +1,6 @@
-import { Data } from "../data/data";
-import { escapeRegex } from "../general/functions";
-import { ClassData } from "./classData";
+import { Data } from "../data/data.js";
+import { escapeRegex } from "../general/functions.js";
+import { ClassData } from "./classData.js";
 
 export function getVariableId(classData: ClassData, data: Data): ClassData {
   const prefix = classData.prefix;

@@ -1,7 +1,7 @@
-import { CssData } from "../../main/loop";
-import { dynamicGenerator } from "../classCreation/dynamicGenerator";
-import { Data } from "../data/data";
-import { removeAllFromArray } from "../general/functions";
+import { CssData } from "../../main/loop.js";
+import { dynamicGenerator } from "../classCreation/dynamicGenerator.js";
+import { Data } from "../data/data.js";
+import { removeAllFromArray } from "../general/functions.js";
 
 export function cssDataToCss(
   cssData: CssData,

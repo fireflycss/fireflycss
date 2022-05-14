@@ -1,5 +1,5 @@
 //Alignment Utilities
-export = {
+export default {
   justifyContent: {
     prefix: "justify",
     alias: "justify-content",

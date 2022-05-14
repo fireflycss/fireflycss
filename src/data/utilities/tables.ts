@@ -1,4 +1,4 @@
-export = {
+export default {
   tableLayout: {
     prefix: "table",
     property: "table-layout",

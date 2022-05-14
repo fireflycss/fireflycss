@@ -1,4 +1,4 @@
-export = {
+export default {
   ringWidth: {
     prefix: "ring",
     properties: ["--ff-ring-shadow", "box-shadow"],

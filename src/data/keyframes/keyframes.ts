@@ -1,5 +1,4 @@
-/* eslint-disable sonarjs/no-duplicate-string */
-export = {
+export default {
   keyframes: {
     /*
         ? How it can look like

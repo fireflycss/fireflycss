@@ -1,5 +1,5 @@
 //Animation Utilities
-export = {
+export default {
   animation: {
     prefix: "motion",
     property: "animation",

@@ -1,12 +1,12 @@
 import { SimpleArguments } from "simple-arguments";
 
-import { Config, getConfig } from "./config";
-import { getKeyframes, Keyframes } from "./keyframes";
-import { getKeys, Keys } from "./keys";
-import { getSafelist, Safelist } from "./safelist";
-import { getShortcuts, Shortcuts } from "./shortcuts";
-import { DataUtilities, getUtilities } from "./utilities";
-import { getVariants, Variants } from "./variants";
+import { Config, getConfig } from "./config.js";
+import { getKeyframes, Keyframes } from "./keyframes.js";
+import { getKeys, Keys } from "./keys.js";
+import { getSafelist, Safelist } from "./safelist.js";
+import { getShortcuts, Shortcuts } from "./shortcuts.js";
+import { DataUtilities, getUtilities } from "./utilities.js";
+import { getVariants, Variants } from "./variants.js";
 
 export { getData };
 

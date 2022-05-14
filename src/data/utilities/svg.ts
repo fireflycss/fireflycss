@@ -1,4 +1,4 @@
-export = {
+export default {
   fill: {
     prefix: "fill",
     property: "fill",

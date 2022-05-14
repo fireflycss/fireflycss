@@ -1,8 +1,8 @@
 import * as fs from "node:fs";
 
-import { isColor } from "../classCreation/colors";
-import { getAllFiles } from "../general/functions";
-import { DataPart, DataPartType } from "./dataPart";
+import { isColor } from "../classCreation/colors.js";
+import { getAllFiles } from "../general/functions.js";
+import { DataPart, DataPartType } from "./dataPart.js";
 
 export function readDataFiles(
   folder: string,

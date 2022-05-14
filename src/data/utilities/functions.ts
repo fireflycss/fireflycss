@@ -1,4 +1,4 @@
-export = {
+export default {
   image: {
     prefix: "f-image",
     property: "--ff-function-image",

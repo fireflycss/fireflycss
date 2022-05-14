@@ -1,8 +1,8 @@
 import path from "node:path";
 
-import { Config } from "./config";
-import { mergeData } from "./mergeData";
-import { readDataFiles } from "./readDataFiles";
+import { Config } from "./config.js";
+import { mergeData } from "./mergeData.js";
+import { readDataFiles } from "./readDataFiles.js";
 
 export function getDataPart(
   config: Config,

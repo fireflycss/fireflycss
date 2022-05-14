@@ -1,6 +1,6 @@
-import { cssDataToCss } from "../utils/cssCompiling/cssDataToCss";
-import { Data } from "../utils/data/data";
-import { createdClasses, CssData, mainLoop } from "./loop";
+import { cssDataToCss } from "../utils/cssCompiling/cssDataToCss.js";
+import { Data } from "../utils/data/data.js";
+import { createdClasses, CssData, mainLoop } from "./loop.js";
 
 export function mainTest(data: Data) {
   const start = Date.now(); // Time build time

@@ -1,7 +1,7 @@
 import { defineUtilities } from "../../helpers/helpers";
 
 //todo fix type issue here
-export = defineUtilities({
+export default defineUtilities({
   screenReader: {
     prefix: "",
     properties: [

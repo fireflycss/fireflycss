@@ -1,4 +1,4 @@
-export = {
+export default {
   //? There is currently no support for grid custom idents via [linename]. if there was all the other grid stuff would have to support it.
   gridTemplateColumns: {
     prefix: "grid-columns",

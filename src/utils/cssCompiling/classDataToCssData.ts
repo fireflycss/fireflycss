@@ -1,6 +1,6 @@
-import { CssData } from "../../main/loop";
-import { ClassData } from "../classData/classData";
-import { Data } from "../data/data";
+import { CssData } from "../../main/loop.js";
+import { ClassData } from "../classData/classData.js";
+import { Data } from "../data/data.js";
 
 export function classDataToCssData(
   classData: ClassData,

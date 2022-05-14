@@ -1,5 +1,5 @@
 // Text Decoration Module
-export = {
+export default {
   textDecorationLine: {
     prefix: "",
     property: "text-decoration-line",

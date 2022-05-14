@@ -1,12 +1,11 @@
 import { escapeCssCharacters } from "../general/functions.js";
 
-export const parseHtmlClasses = function (
+export const parseReactClasses = function (
   content: string,
   stringClasses: string[] = []
 ): string[] {
   const lineFind = /(<(?!\?).*?(?<!\?)>)/gs;
   const linesContent: string[] | null = content.match(lineFind);
-  console.log("--------" + content);
   if (!linesContent) return stringClasses;
 
   for (let lineContent of linesContent) {
@@ -24,10 +23,10 @@ export const parseHtmlClasses = function (
 };
 
 function findClasses(content: string, stringClasses: string[]): string[] {
-  const classFind = /((class)(=|.=)("|\\"|'|\\').*?("|\\"|'|\\'))/g;
+  const classFind = /((className)(=|.=)("|\\"|'|\\').*?("|\\"|'|\\'))/g;
   const classContent: string[] | null = content.match(classFind);
   if (!classContent) return stringClasses;
-  const removeExcessRegex = /((class)(=|.=)|("|\\"|'\\'))/g;
+  const removeExcessRegex = /((className)(=|.=)|("|\\"|'\\'))/g;
 
   let classesString = classContent[0];
   if (!classesString) return stringClasses;

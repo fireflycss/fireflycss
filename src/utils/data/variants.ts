@@ -1,8 +1,7 @@
-import { Config } from "./config";
-import { DataPart, getDataPart } from "./dataPart";
+import { Config } from "./config.js";
+import { DataPart, getDataPart } from "./dataPart.js";
 
 export { getVariants };
-// eslint-disable-next-line sonarjs/cognitive-complexity
 function getVariants(config: Config): Variants {
   const dataPartType = "variants";
   const combined = false;

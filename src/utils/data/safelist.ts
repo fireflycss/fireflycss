@@ -1,5 +1,5 @@
-import { Config } from "./config";
-import { getDataPart } from "./dataPart";
+import { Config } from "./config.js";
+import { getDataPart } from "./dataPart.js";
 
 export { getSafelist };
 

@@ -1,10 +1,10 @@
 import { SimpleArguments } from "simple-arguments";
 
-import { Data, getData } from "../utils/data/data";
-import { mainBuild } from "./build";
-import { mainDevelopmentTools as mainDevelopmentTools } from "./developmentTools";
-import { mainTest } from "./test";
-import { mainWatch } from "./watch";
+import { Data, getData } from "../utils/data/data.js";
+import { mainBuild } from "./build.js";
+import { mainDevelopmentTools as mainDevelopmentTools } from "./developmentTools.js";
+import { mainTest } from "./test.js";
+import { mainWatch } from "./watch.js";
 
 export function main(cliArguments: SimpleArguments) {
   //console.log(cliArguments);

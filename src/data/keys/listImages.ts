@@ -2,4 +2,4 @@
 Keys:
 * listImages
 */
-export = { listImages: { rocket: "url(rocket.png)" } };
+export default { listImages: { rocket: "url(rocket.png)" } };

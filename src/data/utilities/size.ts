@@ -1,4 +1,4 @@
-export = {
+export default {
   width: {
     prefix: "w",
     property: "width",

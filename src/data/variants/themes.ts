@@ -1,4 +1,4 @@
-export = {
+export default {
   themes: {
     dark: "dark",
     navy: "navy",

@@ -1,4 +1,4 @@
-export = {
+export default {
   pseudoClasses: {
     "any-link": "any-link",
     link: "link",

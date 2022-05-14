@@ -1,6 +1,6 @@
-import { Data } from "../data/data";
-import { escapeRegex } from "../general/functions";
-import { ClassData } from "./classData";
+import { Data } from "../data/data.js";
+import { escapeRegex } from "../general/functions.js";
+import { ClassData } from "./classData.js";
 
 export function checkIfClassIsImportant(
   classData: ClassData,
@@ -11,7 +11,7 @@ export function checkIfClassIsImportant(
   const className = classData.className;
   const prefix = classData.prefix;
   const key = classData.key;
-  if (!className.includes(minusDelimiter)) return classData;
+  //if (!className.includes(minusDelimiter)) return classData;
   //todo figure this out and why it doesn't work properly and implement important identifier
 
   const importantRegex = new RegExp(
@@ -30,6 +30,8 @@ export function checkIfClassIsImportant(
   ) {
     classData.important = true;
     classData.className = className.replace(/(\s*!(important)?\s*$)/g, "");
+  } else if (classData.className.startsWith("!")) {
+    classData.important = true;
   } else if (importantRegex.test(prefix)) {
     classData.prefix = prefix.replace(importantRegex, "");
     classData.important = true;

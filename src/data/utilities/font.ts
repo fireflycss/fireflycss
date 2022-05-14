@@ -1,4 +1,4 @@
-export = {
+export default {
   fontFamily: {
     creator: "general",
     dynamic: { enabled: false },

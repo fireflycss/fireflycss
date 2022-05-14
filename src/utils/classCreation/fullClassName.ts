@@ -1,6 +1,6 @@
-import { ClassData } from "../classData/classData";
-import { Data } from "../data/data";
-import { escapeCssCharacters, escapeRegex } from "../general/functions";
+import { ClassData } from "../classData/classData.js";
+import { Data } from "../data/data.js";
+import { escapeCssCharacters, escapeRegex } from "../general/functions.js";
 
 export function setupFullClassName(
   classData: ClassData,
@@ -98,15 +98,7 @@ function getUsedVariants(
   );
   const className = classData.className;
   let usedVariants: string[] | undefined = [];
-  if (
-    classData.type === "class" ||
-    classData.type === "attribute" ||
-    classData.type === "arbitrary" ||
-    classData.type === "variable" ||
-    classData.type === "rawCSS"
-  ) {
-    usedVariants = className.split(variantDelimiterRegex).slice(0, -1);
-  } else if (classData.type === "attributeWithValue") {
+  if (classData.type === "attributeWithValue") {
     usedVariants = className
       .split(/~=/)[1]
       ?.replace(/^!/, "")
@@ -117,6 +109,8 @@ function getUsedVariants(
       ?.split(variantDelimiterRegex);
     if (!usedVariants || !usedVariantsAttribute) return [];
     usedVariants = [...usedVariantsAttribute, ...usedVariants];
+  } else {
+    usedVariants = className.split(variantDelimiterRegex).slice(0, -1);
   }
   if (utilityVariants.length > 0) {
     //todo determine if for selectors utility variants should be first or after.

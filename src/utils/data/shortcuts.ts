@@ -1,5 +1,5 @@
-import { Config } from "./config";
-import { getDataPart } from "./dataPart";
+import { Config } from "./config.js";
+import { getDataPart } from "./dataPart.js";
 
 export { getShortcuts };
 
@@ -11,5 +11,9 @@ function getShortcuts(config: Config): Shortcuts {
 
 export interface Shortcuts {
   extend?: Shortcuts;
-  [key: string]: Shortcuts | (string[] | string);
+  [key: string]: Shortcuts | (string[] | string) | ShortcutObject;
+}
+
+export interface ShortcutObject {
+  [key: string]: string | ShortcutObject;
 }

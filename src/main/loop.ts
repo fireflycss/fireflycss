@@ -1,12 +1,15 @@
-import { classCreator } from "../utils/classCreation/classCreator";
-import { ClassData, setupClassData } from "../utils/classData/classData";
-import { classDataToCssData } from "../utils/cssCompiling/classDataToCssData";
+import { classCreator } from "../utils/classCreation/classCreator.js";
+import { ClassData, setupClassData } from "../utils/classData/classData.js";
+import { classDataToCssData } from "../utils/cssCompiling/classDataToCssData.js";
 import {
   MultiClassData,
   multiClassDataToCssData,
-} from "../utils/cssCompiling/multiClassDataToCssData";
-import { Data } from "../utils/data/data";
-import { ObjectUsedClass, UsedClasses } from "../utils/usedClasses/usedClasses";
+} from "../utils/cssCompiling/multiClassDataToCssData.js";
+import { Data } from "../utils/data/data.js";
+import {
+  ObjectUsedClass,
+  UsedClasses,
+} from "../utils/usedClasses/usedClasses.js";
 
 export { mainLoop };
 function mainLoop(

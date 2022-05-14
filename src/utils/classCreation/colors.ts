@@ -1,4 +1,4 @@
-import { Data } from "../data/data";
+import { Data } from "../data/data.js";
 //todo colors
 export function isColor(input: string): boolean {
   if (

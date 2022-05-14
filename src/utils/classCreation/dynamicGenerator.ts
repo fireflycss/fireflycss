@@ -1,11 +1,12 @@
-import { placeVariableIdOnValue } from "../classData/variableId";
-import { Data } from "../data/data";
-import { UtilityData } from "../data/utilities";
-import { determineDataType } from "../general/dataType";
-import { escapeRegex } from "../general/functions";
-import { arbitraryGenerator, arbitraryMatch } from "./arbitraryGenerator";
-import { getColorType, isColor, setupProperColor } from "./colors";
-const Parser = require("expr-eval").Parser;
+import { Parser } from "expr-eval";
+
+import { placeVariableIdOnValue } from "../classData/variableId.js";
+import { Data } from "../data/data.js";
+import { UtilityData } from "../data/utilities.js";
+import { determineDataType } from "../general/dataType.js";
+import { escapeRegex } from "../general/functions.js";
+import { arbitraryGenerator, arbitraryMatch } from "./arbitraryGenerator.js";
+import { getColorType, isColor, setupProperColor } from "./colors.js";
 
 export function dynamicGenerator(
   key: string,

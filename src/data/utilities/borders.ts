@@ -1,5 +1,5 @@
-//export = get_border_prefixes_data();
-export = {
+//export default get_border_prefixes_data();
+export default {
   borderRadius: {
     prefix: "rounded",
     property: "border-radius",
