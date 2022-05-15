@@ -20,12 +20,12 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "rootDir": "./src",
+    "rootDir": "src",
     // Emit
     //"declaration": false,
     //"declarationDir": "types",
     "declarationMap": false,
-    "outDir": "./lib",
+    "outDir": "lib",
     "removeComments": true,
     "sourceMap": false,
     // Javascript support
@@ -41,7 +41,9 @@
     // Interop Constraints
     "forceConsistentCasingInFileNames": true,
     //Language and Environment
-    "target": "ESNext"
+    "target": "ESNext",
+    // Completeness
+    "skipLibCheck": true
   },
-  "include": ["./src/**/*.ts"]
+  "include": ["src"]
 }

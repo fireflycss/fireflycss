@@ -30,6 +30,7 @@ function generalCreator(
   }
 
   const value = getClassValue(classData, utilityData, data);
+
   if (!value) return classData;
   classData = setupFullClassName(classData, data, utilityData.variants);
   important = getValueImportant(classData);

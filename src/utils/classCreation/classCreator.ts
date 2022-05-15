@@ -24,6 +24,7 @@ export function classCreator(classData: ClassData, data: Data): ClassData {
     prefix = key;
     key = "";
   }
+
   const prefixData: PrefixData = data.utilities[prefix];
   classData = createFromPrefixData(classData, prefixData, key, data);
   return classData;

@@ -3,7 +3,6 @@ import { readFileSync, statSync } from "node:fs";
 import { Data } from "../data/data.js";
 import { getAllFiles } from "../general/functions.js";
 import { parseHtmlClasses } from "./html.js";
-import { parseReactClasses } from "./react.js";
 import { getSafelistClasses } from "./safelist.js";
 import { getShortcutClasses } from "./shortcuts.js";
 
@@ -12,7 +11,7 @@ export function getUsedClasses(data: Data): UsedClasses {
   const content = getFilesContent(filePaths);
   const stringClasses = parseContentClasses(content, data);
   const objectClasses = getObjectClasses(data);
-  const testClasses: string[] = ["bg:hwb(108_39%_29%/0.5)"]; //todo Dev only
+  const testClasses: string[] = []; //["bg:hwb(108_39%_29%/0.5)"]; //todo Dev only
   return {
     strings: [...testClasses, ...stringClasses],
     objects: objectClasses,
@@ -61,8 +60,8 @@ function getFilesContent(filePaths: string[]) {
 function parseContentClasses(content: string, data: Data) {
   let stringClasses: string[] = [];
   stringClasses = parseHtmlClasses(content, stringClasses);
-  stringClasses = parseReactClasses(content, stringClasses);
   stringClasses = getSafelistClasses(data, stringClasses);
+  //todo support javascript, css @apply
   return stringClasses;
 }
 

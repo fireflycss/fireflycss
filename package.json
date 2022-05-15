@@ -49,6 +49,9 @@
   },
   "homepage": "https://github.com/fireflycss/fireflycss",
   "dependencies": {
+    "chokidar": "^3.5.3",
+    "colorbake": "^0.0.3",
+    "expr-eval": "^2.0.2",
     "simple-arguments": "^0.0.9"
   }
 }

@@ -9,15 +9,20 @@ import { mainWatch } from "./watch.js";
 export function main(cliArguments: SimpleArguments) {
   //console.log(cliArguments);
   const data: Data = getData(cliArguments);
+
+  if (data.config.build) {
+    mainBuild(data);
+  }
+  if (data.config.watch) {
+    mainWatch(data);
+  }
+  if (data.config.developmentTools) {
+    mainDevelopmentTools(data);
+  }
   if (data.config.test) {
     mainTest(data);
-  } else if (data.config.build) {
-    mainBuild(data);
-  } else if (data.config.watch) {
-    mainWatch(data);
-  } else if (data.config.developmentTools) {
-    mainDevelopmentTools(data);
-  } else {
-    console.log("No option selected");
   }
+  //else {
+  // console.log("No option selected");
+  //}
 }

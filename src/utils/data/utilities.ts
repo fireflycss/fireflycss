@@ -60,6 +60,7 @@ function compilePrefixLess(
         property: utilityData.property,
         dynamic: utilityData.dynamic || { enabled: false },
         keys: { "": keyValue },
+        creator: utilityData.creator || "general",
       };
     } else if (utilityData.properties && utilitiesPrefix && keyValue) {
       utilitiesPrefix[rawUtilityName] = {
@@ -67,6 +68,7 @@ function compilePrefixLess(
         properties: utilityData.properties,
         dynamic: utilityData.dynamic || { enabled: false },
         keys: { "": keyValue },
+        creator: utilityData.creator || "multi",
       };
     }
   }

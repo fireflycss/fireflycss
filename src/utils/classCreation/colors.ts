@@ -1,3 +1,5 @@
+import colorBake from "colorbake";
+
 import { Data } from "../data/data.js";
 //todo colors
 export function isColor(input: string): boolean {
@@ -87,40 +89,10 @@ export function convertColorToProperFormat(color: string, data: Data): string {
   //todo colorbake
   const colorFormat = data.config.colorFormat;
   if (colorFormat === "rgba") {
-    color = convertColorToRgba(color, data);
+    color = colorBake(color).toString("rgb", { legacy: true });
   }
   return color;
 }
-
-/* ----------------------------- Convert to RGBA ---------------------------- */
-
-function convertColorToRgba(color: string, data: Data): string {
-  const colorType = getColorType(color);
-  switch (colorType) {
-    case "rgba":
-      return color;
-    case "hex": {
-      //console.log(color);
-
-      break;
-    }
-    case "hsla": {
-      //console.log(color);
-
-      break;
-    }
-    case "hwb": {
-      //console.log(color);
-
-      break;
-    }
-    // No default
-  }
-  if (colorType === "23432") console.log(data); //todo temp remove after
-  return color;
-}
-
-/* ----------------------------- Convert to HWB ----------------------------- */
 
 /* -------------------------------------------------------------------------- */
 /*                                   Opacity                                  */

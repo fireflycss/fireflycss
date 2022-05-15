@@ -23,10 +23,10 @@ export const parseHtmlClasses = function (
 };
 
 function findClasses(content: string, stringClasses: string[]): string[] {
-  const classFind = /((class)(=|.=)("|\\"|'|\\').*?("|\\"|'|\\'))/g;
+  const classFind = /((class|className)(=|.=)("|\\"|'|\\').*?("|\\"|'|\\'))/g;
   const classContent: string[] | null = content.match(classFind);
   if (!classContent) return stringClasses;
-  const removeExcessRegex = /((class)(=|.=)|("|\\"|'\\'))/g;
+  const removeExcessRegex = /((class|className)(=|.=)|("|\\"|'\\'))/g;
 
   let classesString = classContent[0];
   if (!classesString) return stringClasses;
@@ -51,7 +51,12 @@ function findAttributesWithValue(
   for (const attributeWithValue of attributesWithValue) {
     const attributeArray = attributeWithValue.split(/=(?=("|\\"|'|\\'))/);
     const attributeName = attributeArray[0];
-    if (!attributeName) continue;
+    if (
+      !attributeName ||
+      attributeName === "class" ||
+      attributeName === "className"
+    )
+      continue;
     const reRemoveExcess = new RegExp(
       "((" +
         escapeCssCharacters(attributeName) +
@@ -78,7 +83,7 @@ function findAttributesWithoutValue(
   const attributes: string[] = content.split(/\s+/);
   if (!attributes) return stringClasses;
   for (const attribute of attributes) {
-    if (!attribute) continue;
+    if (!attribute || /=/g.test(attribute)) continue;
     stringClasses.push("[" + attribute + "~=]");
     //todo add a way to filter out common ones
   }
