@@ -1,4 +1,4 @@
 /*FireFlyCSS*/
-.no-decoration {
-	text-decoration-line: none;
+.rounded\:10 {
+	border-radius: 2.5rem;
 }

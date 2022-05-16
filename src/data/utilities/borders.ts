@@ -4,6 +4,7 @@ export default {
     prefix: "rounded",
     property: "border-radius",
     dynamic: {
+      enabled: true,
       dataTypes: ["length", "percentage", "keyword"],
       combinations: 4,
       multipleSeparator: " / ",
@@ -14,6 +15,7 @@ export default {
     prefix: "rounded-t",
     properties: ["border-top-left-radius", "border-top-right-radius"],
     dynamic: {
+      enabled: true,
       dataTypes: ["length", "percentage", "keyword"],
       combinations: 4,
     },
@@ -23,6 +25,7 @@ export default {
     prefix: "rounded-l",
     properties: ["border-top-left-radius", "border-bottom-left-radius"],
     dynamic: {
+      enabled: true,
       dataTypes: ["length", "percentage", "keyword"],
       combinations: 4,
     },
@@ -32,6 +35,7 @@ export default {
     prefix: "rounded-r",
     properties: ["border-top-right-radius", "border-bottom-right-radius"],
     dynamic: {
+      enabled: true,
       dataTypes: ["length", "percentage", "keyword"],
       combinations: 4,
     },
@@ -41,6 +45,7 @@ export default {
     prefix: "rounded-b",
     properties: ["border-bottom-left-radius", "border-bottom-right-radius"],
     dynamic: {
+      enabled: true,
       dataTypes: ["length", "percentage", "keyword"],
       combinations: 4,
     },
@@ -50,6 +55,7 @@ export default {
     prefix: "rounded-tl",
     property: "border-top-left-radius",
     dynamic: {
+      enabled: true,
       dataTypes: ["length", "percentage", "keyword"],
       combinations: 2,
     },
@@ -59,6 +65,7 @@ export default {
     prefix: "rounded-bl",
     property: "border-bottom-left-radius",
     dynamic: {
+      enabled: true,
       dataTypes: ["length", "percentage", "keyword"],
       combinations: 2,
     },
@@ -68,6 +75,7 @@ export default {
     prefix: "rounded-br",
     property: "border-bottom-right-radius",
     dynamic: {
+      enabled: true,
       dataTypes: ["length", "percentage", "keyword"],
       combinations: 2,
     },
@@ -77,6 +85,7 @@ export default {
     prefix: "rounded-tr",
     property: "border-top-right-radius",
     dynamic: {
+      enabled: true,
       dataTypes: ["length", "percentage", "keyword"],
       combinations: 2,
     },
