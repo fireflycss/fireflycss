@@ -26,7 +26,6 @@ export function classCreator(classData: ClassData, data: Data): ClassData {
   }
 
   const prefixData: PrefixData = data.utilities[prefix];
-  console.log(prefixData);
   classData = createFromPrefixData(classData, prefixData, key, data);
   return classData;
 }
@@ -57,6 +56,7 @@ function createFromPrefixData(
     ) {
       continue;
     }
+
     //console.log(utilityData);
     classData = creator(classData, utilityData, data);
     if (classData.created) return classData;

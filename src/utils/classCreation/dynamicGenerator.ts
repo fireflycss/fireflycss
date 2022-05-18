@@ -101,6 +101,7 @@ function multipleInputsLoop(
     dynamicData.inputs = inputs;
     dynamicData.multipleInput = multipleInput;
     dynamicData = inputsLoop(dynamicData, inputs, utilityData, data);
+
     if (!dynamicData.valid) return dynamicData;
   }
   return dynamicData;
@@ -121,6 +122,7 @@ function inputsLoop(
           ? "/ "
           : utilityData.dynamic?.separator;
     }
+
     dynamicData = handleInputVariableId(dynamicData, data);
     dynamicData = handleDynamic(dynamicData, utilityData, data);
 
@@ -171,6 +173,7 @@ function handleDynamic(
   if (!dynamicData.valid || dynamicData.value !== oldValue) return dynamicData;
 
   dynamicData = handleGeneration(dynamicData, utilityData, data);
+
   return dynamicData;
 }
 
@@ -441,26 +444,23 @@ function handleGeneration(
   if (!primaryDataType) return dynamicData;
   if (valueUnitTypes.includes(primaryDataType)) {
     dynamicData = generateValueUnit(dynamicData, utilityData, data);
-    dynamicData = updateDynamicDataValue(dynamicData);
   } else
     switch (primaryDataType) {
       case "color": {
         dynamicData = generateColor(dynamicData, utilityData, data);
-        dynamicData = updateDynamicDataValue(dynamicData);
-        return dynamicData;
+        break;
       }
       case "gradient": {
         dynamicData = generateGradient(dynamicData, utilityData, data);
-        dynamicData = updateDynamicDataValue(dynamicData);
-        return dynamicData;
+        break;
       }
       case "ratio": {
         dynamicData = generateRatio(dynamicData, utilityData);
-        dynamicData = updateDynamicDataValue(dynamicData);
-        return dynamicData;
+        break;
       }
       // No default
     }
+  dynamicData = updateDynamicDataValue(dynamicData);
   return dynamicData;
 }
 
