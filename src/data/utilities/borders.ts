@@ -168,6 +168,20 @@ export default {
     },
     keys: "colors",
   },
+  borderX: {
+    prefix: "border-x",
+    properties: ["border-left", "border-right"],
+    dynamic: {
+      enabled: true,
+      dataTypes: ["shorthand"],
+      combinations: 3,
+      duplicateValues: true,
+      shorthand: {
+        border: ["borderWidth", "borderColor", "borderStyle"],
+      },
+    },
+    keys: {},
+  },
   borderXOpacity: {
     prefix: "border-x-o",
     property: "--ff-border-x-opacity",
@@ -206,6 +220,20 @@ export default {
     property: "--ff-border-y-opacity",
     dynamic: { enabled: true, dataTypes: ["alpha"] },
     keys: "colors",
+  },
+  borderY: {
+    prefix: "border-y",
+    properties: ["border-top", "border-bottom"],
+    dynamic: {
+      enabled: true,
+      dataTypes: ["shorthand"],
+      combinations: 3,
+      duplicateValues: true,
+      shorthand: {
+        border: ["borderWidth", "borderColor", "borderStyle"],
+      },
+    },
+    keys: {},
   },
   borderTopWidth: {
     prefix: "border-t",
