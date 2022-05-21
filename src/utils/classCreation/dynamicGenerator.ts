@@ -848,6 +848,7 @@ function handleGradientStops(dynamicData: DynamicData): DynamicData {
 function handleGradientSingleInput(dynamicData: DynamicData): DynamicData {
   //todo currently only works for rgba
   if (dynamicData.inputs.length !== 1) return dynamicData;
+
   const colorType = getColorType(dynamicData.singleValue);
   if (colorType === "rgba") {
     const test =

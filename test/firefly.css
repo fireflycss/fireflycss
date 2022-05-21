@@ -1,4 +1,11 @@
-/*FireFlyCSS*/
-.border\:1px\,blue {
-	border: 1px rgba(33, 150, 243, var(--ff-border-opacity, 1));
+/* FireFlyCSS */
+/* CSS Normalization & Fixes */
+HTML, body {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+/* Generated CSS*/
+.filter {
+	filter: blur(var(--ff-blur, 0px)) brightness(var(--ff-brightness, 1)) contrast(var(--ff-contrast, 1)) drop-shadow(var(--ff-drop-shadow, 0 0 #0000)) grayscale(var(--ff-grayscale, 0)) hue-rotate(var(--ff-hue-rotate), 0deg) invert(var(--ff-invert,0)), saturate(var(--ff-saturate, 1)) sepia(var(--ff-sepia, 0));
 }

@@ -4,7 +4,7 @@ import { Data } from "../data/data.js";
 //todo colors
 export function isColor(input: string): boolean {
   if (
-    /(#[\dA-Fa-f]{1,8})/.test(input) ||
+    /^(#[\dA-Fa-f]{1,8}$)/.test(input) ||
     /^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+(?:\.\d+)?)%?)?\*?\)$/.test(
       input
     ) ||
