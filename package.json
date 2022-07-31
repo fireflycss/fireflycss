@@ -1,0 +1,57 @@
+{
+  "name": "fireflycss",
+  "version": "0.0.0-1",
+  "description": "A CSS framework",
+  "type": "commonjs",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "bin": {
+    "fireflycss": "cli/index.js"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "build-type": "tsc ./src/index.ts --declaration --emitDeclarationOnly --downlevelIteration --outDir ./lib/",
+    "copy-package-json": "cp package.json ./lib",
+    "build": "npm run tsc && npm run build-type && npm run copy-package-json",
+    "prepublish-script": "npm run build",
+    "publish-script": " npm publish ./lib --access public",
+    "test": "node ./lib/cli/index.js --test",
+    "test-build": "node ./lib/cli/index.js --config './test/firefly.config.js'"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "cli"
+  ],
+  "author": "Kevin Cobian",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-regexp": "^1.5.1",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-unicorn": "^40.0.0",
+    "prettier": "^2.5.1",
+    "prettier-eslint": "^13.0.0",
+    "typescript": "^4.5.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fireflycss/fireflycss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fireflycss/fireflycss/issues"
+  },
+  "homepage": "https://github.com/fireflycss/fireflycss",
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "colorbake": "^0.0.3",
+    "expr-eval": "^2.0.2",
+    "simple-arguments": "^0.0.9"
+  }
+}

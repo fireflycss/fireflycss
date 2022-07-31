@@ -1,0 +1,162 @@
+export default {
+  fill: {
+    prefix: "fill",
+    property: "fill",
+    dynamic: {
+      enabled: true,
+      dataTypes: ["color", "function", "keyword"],
+      functions: ["rgb", "rgba", "hsl", "hsla", "url"],
+    },
+    keys: "colors",
+  },
+  stroke: {
+    prefix: "stroke",
+    property: "stroke",
+    dynamic: {
+      enabled: true,
+      dataTypes: ["color", "function", "keyword"],
+      functions: ["rgb", "rgba", "hsl", "hsla"],
+    },
+    keys: "colors",
+  },
+  strokeWidth: {
+    prefix: "stroke",
+    property: "stroke-width",
+    dynamic: {
+      enabled: true,
+      dataTypes: ["number", "length", "percentage"],
+    },
+    keys: {},
+  },
+  strokeDasharray: {
+    prefix: "dasharray",
+    property: "stroke-dasharray",
+    dynamic: {
+      enabled: true,
+      dataTypes: ["number", "length", "percentage"],
+    },
+    keys: {},
+  },
+  strokeDashoffset: {
+    prefix: "dashoffset",
+    property: "stroke-dashoffset",
+    dynamic: {
+      enabled: true,
+      dataTypes: ["number", "length", "percentage"],
+    },
+    keys: {},
+  },
+  strokeLinecap: {
+    prefix: "linecap",
+    property: "stroke-linecap",
+    dynamic: { enabled: false, dataTypes: ["keyword"] },
+    keys: { butt: "butt", round: "round", discrete: "discrete" },
+  },
+  strokeLinejoin: {
+    prefix: "linejoin",
+    property: "stroke-linejoin",
+    dynamic: { enabled: false, dataTypes: ["keyword"] },
+    keys: {
+      crop: "crop",
+      arcs: "arcs",
+      miter: "miter",
+      bevel: "bevel",
+      round: "round",
+      fallback: "fallback",
+    },
+  },
+  maskType: {
+    prefix: "mask",
+    property: "mask-type",
+    dynamic: { enabled: false, dataTypes: ["keyword"] },
+    keys: { luminance: "luminance", alpha: "alpha" },
+  },
+  maskPosition: {
+    prefix: "mask",
+    property: "mask-position",
+    dynamic: {
+      enabled: true,
+      dataTypes: ["length", "percentage", "keyword"],
+      combinations: 2,
+    },
+    keys: {
+      top: "top",
+      bottom: "bottom",
+      left: "left",
+      right: "right",
+      center: "center",
+      "top-left": "top left",
+      "top-right": "top right",
+      "center-left": "center left",
+      "center-right": "center right",
+      "bottom-left": "bottom left",
+      "bottom-right": "bottom right",
+    },
+  },
+  maskImage: {
+    prefix: "mask",
+    properties: ["-webkit-mask-image", "mask-image"],
+    dynamic: {
+      enabled: true,
+      dataTypes: ["function", "keyword"],
+      functions: [
+        "url",
+        "linear-gradient",
+        "repeating-linear-gradient",
+        "radial-gradient",
+        "repeating-radial-gradient",
+        "conic-gradient",
+      ],
+    },
+    keys: [
+      "images",
+      "functionImages",
+      {
+        none: "none",
+      },
+    ],
+  },
+  maskClip: {
+    prefix: "mask-clip",
+    properties: ["-webkit-mask-clip", "mask-clip"],
+    dynamic: { enabled: false, dataTypes: ["keyword"] },
+    keys: {
+      content: "content-box",
+      padding: "padding-box",
+      border: "border-box",
+      margin: "margin-box",
+      fill: "fill-box",
+      stroke: "stroke-box",
+      view: "view-box",
+      "no-clip": "no-clip",
+    },
+  },
+  maskSize: {
+    prefix: "mask-size",
+    properties: ["-webkit-mask-size", "mask-size"],
+    dynamic: {
+      enabled: true,
+      dataTypes: ["length", "percentage", "keyword"],
+      combinations: 2,
+    },
+    keys: {
+      auto: "auto",
+      contain: "contain",
+      cover: "cover",
+    },
+  },
+  maskOrigin: {
+    prefix: "mask",
+    property: "mask-origin",
+    dynamic: { enabled: false, dataTypes: ["keyword"] },
+    keys: {
+      content: "content-box",
+      padding: "padding-box",
+      border: "border-box",
+      margin: "margin-box",
+      fill: "fill-box",
+      stroke: "stroke-box",
+      view: "view-box",
+    },
+  },
+};
